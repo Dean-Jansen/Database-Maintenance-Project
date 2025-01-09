@@ -1,4 +1,11 @@
 -- ======================================
+-- DISCLAIMER
+-- Use the below scripts at your own risk. These scripts are intended for educational purposes only.
+-- You should thoroughly research and test each script in a non-production environment before using it.
+-- The author is not responsible for any damage or data loss resulting from the use of these scripts.
+-- ======================================
+
+-- ======================================
 -- Archiving Old Data
 -- Moves and archives records older than a specified timeframe
 -- ======================================
@@ -104,21 +111,17 @@ CREATE TABLE MaintenanceLogTable (
     ActivityTimestamp DATETIME
 );
 
-INSERT INTO MaintenanceLogTable (ActivityType, ActivityTimestamp)
-VALUES ('Archive Old Data', GETDATE());
+CREATE PROCEDURE LogMaintenanceActivity
+    @ActivityType NVARCHAR(50)
+AS
+BEGIN
+    INSERT INTO MaintenanceLogTable (ActivityType, ActivityTimestamp)
+    VALUES (@ActivityType, GETDATE());
+END;
 
-INSERT INTO MaintenanceLogTable (ActivityType, ActivityTimestamp)
-VALUES ('Index Reorganization', GETDATE());
-
-INSERT INTO MaintenanceLogTable (ActivityType, ActivityTimestamp)
-VALUES ('Statistics Update', GETDATE());
-
-INSERT INTO MaintenanceLogTable (ActivityType, ActivityTimestamp)
-VALUES ('Database Shrink', GETDATE());
-
-INSERT INTO MaintenanceLogTable (ActivityType, ActivityTimestamp)
-VALUES ('Transaction Log Backup', GETDATE());
-
-INSERT INTO MaintenanceLogTable (ActivityType, ActivityTimestamp)
-VALUES ('Integrity Check', GETDATE());
-
+EXEC LogMaintenanceActivity 'Archive Old Data';
+EXEC LogMaintenanceActivity 'Index Reorganization';
+EXEC LogMaintenanceActivity 'Statistics Update';
+EXEC LogMaintenanceActivity 'Database Shrink';
+EXEC LogMaintenanceActivity 'Transaction Log Backup';
+EXEC LogMaintenanceActivity 'Integrity Check';
