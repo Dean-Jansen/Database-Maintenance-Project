@@ -1,6 +1,6 @@
 # Database Maintenance Project
 
-Welcome to my Database Maintenance Project repository! In this project, I showcase my skills by creating a complex and creative SQL script for performing various database maintenance tasks. The script includes operations such as archiving old data, reorganizing indexes, updating statistics, and more.
+Welcome to my SQL Scripts Repository for Database Maintenance! In this collection, I showcase various SQL scripts I've used for performing essential database maintenance tasks. These scripts include operations like archiving old data, reorganizing indexes, updating statistics, and other optimization techniques that help ensure the smooth performance of a database.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -15,10 +15,10 @@ Welcome to my Database Maintenance Project repository! In this project, I showca
 The Database Maintenance Project focuses on maintaining a healthy database by performing various maintenance tasks. It includes a SQL script that automates operations such as archiving old data, reorganizing indexes, updating statistics, shrinking database files, and more.
 
 ## Project Structure
-- `maintenance_script.sql`: SQL script containing the complex maintenance operations.
+- `maintenance_script.sql`: SQL script containing the maintenance operations.
 
 ## Maintenance Script
-The maintenance script (`maintenance_script.sql`) is a complex SQL script designed to handle various database maintenance tasks. It includes operations such as archiving old data, reorganizing indexes, updating statistics, shrinking database files, checking integrity, and logging maintenance activities.
+The maintenance script (`maintenance_script.sql`) is a SQL script designed to handle various database maintenance tasks. It includes operations such as archiving old data, reorganizing indexes, updating statistics, shrinking database files, checking integrity, and logging maintenance activities.
 
 ## Features
 - **Archiving Old Data:** Move and archive records older than a specified timeframe.
@@ -30,8 +30,8 @@ The maintenance script (`maintenance_script.sql`) is a complex SQL script design
 - **Logging:** Log maintenance activities, including completion timestamps and types.
 
 ## How to Use
-1. Execute the `maintenance_script.sql` script in your database management tool. (Use at own risk)
-2. Customize script parameters such as archive timeframe, database name, and file paths as needed.
+1. Open the `maintenance_script.sql` script in your SQL editor of choice. (Use at own risk)
+2. View each section of the file and read the description and "How to use" to understand the function of the script
 
 ## Contributing
 Contributions are welcome! If you have suggestions, improvements, or additional features you'd like to add to the Database Maintenance Project, please open an issue or submit a pull request.
